@@ -1,4 +1,3 @@
-#!/usr/bin/python3
 def uppercase(str):
     for ch in str:
         if ord(ch) >= ord('a') and ord(ch) <= ord('z'):
@@ -6,4 +5,4 @@ def uppercase(str):
         else:
             c = ch
         print("{:s}".format(c), end="")
-        print()
+    print()
