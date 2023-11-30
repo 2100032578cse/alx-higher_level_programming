@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 from sys import argv
-i = 1
 if __name__ == "__main__":
-    leng = len(argv)
+    leng = len(argv) - 1
     if leng == 1:
         print('0 arguments.')
     elif leng == 2:
