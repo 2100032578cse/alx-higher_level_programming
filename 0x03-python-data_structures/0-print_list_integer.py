@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 def print_list_integer(my_list=[]):
     n = len(my_list)
-    for i in range(n):
-        print(my_list[i])
-        i += 1
+    i = 0
+    while i < n:
+        print("{:d}".format(my_list[i]))
+        i += 1;
