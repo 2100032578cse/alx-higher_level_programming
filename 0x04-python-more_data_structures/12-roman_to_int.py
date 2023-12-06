@@ -10,15 +10,14 @@ def roman_to_int(roman_string):
     n = len(roman_string)
     ans = 0
     i = 0
-    while(i < n):
+    while (i < n):
         if roman_dict.get(roman_string[i], 0) == 0:
-            return (0)
+            return 0
 
         if (i != (n - 1) and
                 roman_dict[roman_string[i]] < roman_dict[roman_string[i + 1]]):
-                ans = ans + roman_dict[roman_string[i]] * -1
+            ans = ans + roman_dict[roman_string[i]] * -1
         else:
             ans += roman_dict[roman_string[i]]
         i += 1
-
     return (ans)
