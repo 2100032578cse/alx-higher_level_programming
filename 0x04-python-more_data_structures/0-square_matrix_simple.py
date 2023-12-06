@@ -6,4 +6,3 @@ def square_matrix_simple(matrix=[]):
     for i in range(n):
         rmatrix[i] = list(map(lambda x: x * x, matrix[i]))
     return rmatrix
-
