@@ -1,39 +1,42 @@
 #!/usr/bin/python3
-"""Defines a class Square."""
+"""Coordinates of a square"""
 
 
 class Square:
-    """Represents a square."""
+    """Private instance attribute: size
+    Instantiation with area with the position method """
 
-     def __init__(self, size=0, position=(0, 0)):
+    def __init__(self, size=0, position=(0, 0)):
         """Initializes attribute size """
         self.size = size
         self.position = position
-    def area(self):    
-        """Return the current area of the square."""
+
+    def area(self):
+        """func to claculate the area"""
         return (self.__size * self.__size)
-    
+
     @property
     def size(self):
-        """Get/set the current size of the square."""
-        return (self.__size)
+        """square related getter"""
+        return self.__size
 
     @size.setter
     def size(self, value):
-        if not isinstance(value, int):
+        """the attribute size initialization """
+        if (type(value) is not int):
             raise TypeError("size must be an integer")
-        elif value < 0:
+        if value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
 
     @property
     def position(self):
-        """Getter for position"""
+        """here is getter of position"""
         return self.__position
 
     @position.setter
     def position(self, value):
-        """Initializes attribute position"""
+        """position attribute initialized"""
         if len(value) is not 2:
             raise TypeError("position must be a tuple of 2 positive integers")
         if (type(value[0]) is not int or value[0] < 0):
@@ -43,7 +46,7 @@ class Square:
         self.__position = value
 
     def my_print(self):
-        """Print method"""
+        """Print method reqired"""
         if (self.size == 0):
             print()
         else:
@@ -55,4 +58,3 @@ class Square:
                 for j in range(self.size):
                     print("#", end="")
                 print("")
-    
