@@ -6,7 +6,9 @@ import sys
 
 
 if __name__ == "__main__":
-     if len(sys.argv) != 2:
+    """ main func"""
+
+    if len(sys.argv) != 2:
         print("Usage: nqueens N")
         sys.exit(1)
     if sys.argv[1].isdigit() is False:
