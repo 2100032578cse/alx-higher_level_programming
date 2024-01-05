@@ -1,14 +1,8 @@
 #!/usr/bin/python3
-""" locked class task"""
+"""for defining locked class."""
 
 
 class LockedClass:
-    """ user will not be able to create anew class"""
+    """ for creating instance"""
 
-    __slot__ = ["first_name"]
-
-
-def __init__(self):
-    """ for creating it"""
-
-    self.first_name = "first_name"
+    __slots__ = ["first_name"]
