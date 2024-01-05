@@ -2,5 +2,4 @@
 
 
 def copy_list(my_list):
-    lst = my_list.copy()
-    return lst
+    return my_list[:-1]
