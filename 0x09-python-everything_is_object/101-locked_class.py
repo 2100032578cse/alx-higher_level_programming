@@ -7,6 +7,7 @@ class LockedClass:
 
     __slot__ = ["first_name"]
 
+
 def __init__(self):
     """ for creating it"""
 
