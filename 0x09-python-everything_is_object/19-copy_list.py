@@ -2,5 +2,5 @@
 
 
 def copy_list(my_list):
-    lst = lmy_list.copy()
+    lst = my_list.copy()
     return lst
