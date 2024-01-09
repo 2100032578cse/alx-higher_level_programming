@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-""" function to add arguments to python list"""
+""" 
+    function to add arguments to python list
+    and save to file:
+"""
 
 
 from sys import argv
