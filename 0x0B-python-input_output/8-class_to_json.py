@@ -1,7 +1,11 @@
 #!/usr/bin/python3
-""" class to json"""
+"""
+    8-class_to_json: class_to_json()
+"""
 
 
-ef class_to_json(obj):
-    """ return dict description"""
+def class_to_json(obj):
+    """
+        returns the dictionary description.
+    """
     return obj.__dict__
