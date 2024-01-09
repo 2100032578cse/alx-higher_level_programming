@@ -1,0 +1,23 @@
+#!/usr/bin/python3
+"""Defining Student class"""
+
+
+class Student:
+    """
+        this is for student class body.
+        it goes here
+    """
+
+    def __init__(self, first_name, last_name, age):
+        """ student instance initialization"""
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = age
+
+    def to_json(self, attrs=None):
+        """ for dict representation"""
+
+        if atrrs is not None:
+            return {k: self.__dict__[k] for k in self.__dict__.keys() & attr}
+        else:
+            return self.__dict__
