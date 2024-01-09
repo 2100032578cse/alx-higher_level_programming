@@ -8,11 +8,14 @@ load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
 
 if __name__ == "__main__":
+
     filename = "add_item.json"
+
     try:
-        alist = load_from_json_file(filename)
-    except FileNotFoundError:
-        alist = []
-    for a in sys.argv[1:]:
-        alist.append(a)
-    save_to_json_file(alist, filename)
+        lst = load_from_json_file(filename)
+    except:
+        lst = []
+
+    for arg in sys.argv[1:]:
+        lst.append(arg)
+    save_to_json_file(lst, filename)
