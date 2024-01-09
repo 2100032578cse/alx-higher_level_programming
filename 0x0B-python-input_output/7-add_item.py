@@ -13,7 +13,7 @@ if __name__ == "__main__":
 
     try:
         lst = load_from_json_file(filename)
-    except:
+    except FileNotFoundError:
         lst = []
 
     for arg in sys.argv[1:]:
