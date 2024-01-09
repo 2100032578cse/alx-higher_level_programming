@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-""" 
-    function to add arguments to python list
-    and save to file:
+"""
+function to add arguments to python listand save to file:
 """
 
 

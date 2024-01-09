@@ -18,7 +18,7 @@ class Student:
         """retrieves a dictionary representation
         of a Student instance
         """
-         if attr is not None:
+        if attr is not None:
             res = {k: self.__dict__[k] for k in self.__dict__.keys() & attr}
             return res
         else:
