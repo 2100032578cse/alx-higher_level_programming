@@ -22,3 +22,11 @@ class Student:
                 all(type(ele) == str for ele in attrs)):
             return {k: getattr(self, k) for k in attrs if hasattr(self, k)}
         return self.__dict__
+        def reload_from_json(self, json):
+        """
+            replaces all attributes of the Student Instance.
+            Args:
+                json (dictionary): reload data.
+        """
+        for key, value in json.items():
+            self.__setattr__(key, value)
