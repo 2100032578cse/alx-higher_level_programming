@@ -18,10 +18,11 @@ class Student:
         """retrieves a dictionary representation
         of a Student instance
         """
-        if (type(attrs) == list and
-                all(type(ele) == str for ele in attrs)):
-            return {k: getattr(self, k) for k in attrs if hasattr(self, k)}
-        return self.__dict__
+         if attrs is not None:
+            res = {k: self.__dict__[k] for k in self.__dict__.keys() & attrs}
+            return res
+        else:
+            return self.__dict__
 
     def reload_from_json(self, json):
         """
