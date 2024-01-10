@@ -10,7 +10,7 @@ def pascal_triangle(n):
         Returns: the list of lists
     """
 
-    outer= []
+    outer = []
 
     if n <= 0:
         return outer
