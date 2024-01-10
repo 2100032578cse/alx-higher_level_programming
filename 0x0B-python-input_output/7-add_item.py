@@ -18,4 +18,4 @@ if __name__ == "__main__":
         items = []
     argv.pop(0)
     items.extend(argv)
-    save_to_json_file(items, 'add_item.json')"""
+    save_to_json_file(items, 'add_item.json')
