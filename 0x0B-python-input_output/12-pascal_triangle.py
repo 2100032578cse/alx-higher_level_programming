@@ -10,13 +10,14 @@ def pascal_triangle(n):
         Returns: the list of lists
     """
 
-    row = [0]
-    p = [1]
-    triangle = []
+    outer= []
 
     if n <= 0:
-        return triangle
+        return outer
     for i in range(n):
-        triangle.append(row)
-        row = (lc+rw for lc, rw i n zip(row + t, t + row))
-    return triangle
+        inner = [1] * (i+1)
+        outer.append(inner)
+    for i in range(2, n):
+        for j in range(1, i):
+            outer[i][j] = outer[i - 1][j - 1] + outer[i - 1][j]
+    return outer
