@@ -3,7 +3,7 @@
 
 
 def is_same_class(obj, a_class):
-  """
+    """
     checks instance of a specified class
 
     Args:

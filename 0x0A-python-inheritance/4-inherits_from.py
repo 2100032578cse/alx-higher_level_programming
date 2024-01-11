@@ -8,7 +8,7 @@ This module contains one function
 
 def inherits_from(obj, a_class):
     """
-    checks instance of a specified class
+    checks instance of a speified class
 
     Args:
     obj - object
