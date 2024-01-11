@@ -1,1 +1,44 @@
-i
+Using "lazy_matrix_mul"
+"""""""""""""""""""""""
+
+Importing the function from the module:
+	>>> lazy_matrix_mul = __import__("101-lazy_matrix_mul").lazy_matrix_mul
+
+Checking docstring:
+	 >>> m = __import__("101-lazy_matrix_mul").__doc__
+	 >>> len(m) > 1
+	 True
+
+Checking for 0 args:
+	 >>> lazy_matrix_mul()
+	 Traceback (most recent call last):
+	 ...
+	 TypeError: lazy_matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'
+
+Checking few args:
+	 >>> lazy_matrix_mul([[1, 2], [3, 4]])
+	 Traceback (most recent call last):
+	 ...
+	 TypeError: lazy_matrix_mul() missing 1 required positional argument: 'm_b'
+
+Checking many args:
+	 >>> lazy_matrix_mul([[1, 2], [3, 4]], [[5, 6], [7, 8]], [[9, 10], [11, 12],[13, 14]])
+	 Traceback (most recent call last):
+	 ...
+	 TypeError: lazy_matrix_mul() takes 2 positional arguments but 3 were given
+
+Checking empty m_b:
+	 >>> lazy_matrix_mul([[1, 2], [3, 4]], [])
+	 Traceback (most recent call last):
+	 ...
+	 ValueError: shapes (2,2) and (0,) not aligned: 2 (dim 1) != 0 (dim 0)
+
+Checking empty rows:
+	 >>> print(lazy_matrix_mul([[1, 2], [3, 4]], [[], []]))
+	 []
+
+Checking for uneven m_a:
+	 >>> lazy_matrix_mul([[1, 2], [3, 4, 5]], [[1, 2], [3, 4]])
+	 Traceback (most recent call last):
+	 ...
+	 ValueError: setting an array element with a sequence.
