@@ -1,3 +1,6 @@
+using "add_integer"
+"""""""""""""""""""
+
 Checking regular addition:
 	 >>> add_integer(2, 3)
 	 5
