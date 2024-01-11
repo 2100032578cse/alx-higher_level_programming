@@ -5,8 +5,8 @@ module for printing 2 lines
 
 
 def text_indentation(text):
-  """ text indendation comments"""
-  if type(text) is not str:
+    """ text indendation comments"""
+    if type(text) is not str:
         raise TypeError("text must be a string")
     flag = 0
     for a in text:
