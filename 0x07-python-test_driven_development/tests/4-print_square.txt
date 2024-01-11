@@ -1,5 +1,5 @@
-using "print_square"
-"""""""""""""""""""
+using "print_square" module
+"""""""""""""""""""""""""""
 Checking funct docstring:
 	 >>> f = __import__("4-print_square").print_square.__doc__
          >>> len(f) > 1
