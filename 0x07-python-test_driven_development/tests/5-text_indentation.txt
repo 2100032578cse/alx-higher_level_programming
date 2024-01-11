@@ -28,7 +28,7 @@ Checking for passing not str type:
          TypeError: text must be a string
 
 Checking special chars:
-	 >>> text_indentation(" . ? : ")
+	 >>> text_indentation(" . ?  ")
 	 .
 	 <BLANKLINE>
 	 ?
