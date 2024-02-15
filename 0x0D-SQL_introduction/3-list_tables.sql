@@ -1,3 +1,3 @@
---script to list the database
+-- script to list the database
 -- tables
 SHOW TABLES;
