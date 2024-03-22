@@ -12,11 +12,11 @@ if __name__ == "__main__":
     c.execute("SELECT cities.name FROM cities LEFT JOIN states\
             ON states.id = cities.state_id WHERE states.name = %s\
             ORDER BY cities.id ASC", (sys.argv[4],))
-    ans = cur.fetchall()
+    ans = c.fetchall()
     res = []
     for ele in ans:
         res.append(ele[0])
     joined = ", ".join(res)
     print(joined)
-    ans.close()
+    c.close()
     db.close()
