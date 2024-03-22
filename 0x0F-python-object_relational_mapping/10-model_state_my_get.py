@@ -5,7 +5,7 @@ database hbtn_0e_6_usa"""
 if __name__ == "__main__":
     import sys
     from model_state import Base, State
-    from sqlalchemy import create_engine
+    from sqlalchemy import create_engine, func
     from sqlalchemy.orm import sessionmaker
 
     mysql_engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
@@ -14,5 +14,9 @@ if __name__ == "__main__":
     Base.metadata.create_all(mysql_engine)
     Session = sessionmaker(bind=mysql_engine)
     session = Session()
-    for ele in session.query(State).filter(State.name.contains('a')):
-        print("{:d}: {:s}".format(ele.id, ele.name))
+    ele= session.query(State).filter(
+        State.name == func.binary(sys.argv[4])).first()
+    if ele:
+        print("{:d}".format(ele.id))
+    else:
+        print("Not found")
