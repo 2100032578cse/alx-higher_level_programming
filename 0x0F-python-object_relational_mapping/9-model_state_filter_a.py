@@ -16,3 +16,10 @@ if __name__ == "__main__":
     session = Session()
     for ele in session.query(State).filter(State.name.contains('a')):
         print("{:d}: {:s}".format(ele.id, ele.name))
+    
+   
+    Base.metadata.create_all(mysql_engine)
+    Session = sessionmaker(bind=mysql_engine)
+    session = Session()
+    for ele in session.query(State).filter(State.name.contains('a')):
+        print("{:d}: {:s}".format(ele.id, ele.name))
