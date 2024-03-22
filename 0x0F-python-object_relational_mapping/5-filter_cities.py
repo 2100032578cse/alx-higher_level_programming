@@ -11,7 +11,7 @@ if __name__ == "__main__":
     c = db.cursor()
     c.execute("SELECT cities.name FROM cities LEFT JOIN states\
             ON states.id = cities.state_id WHERE states.name = %s\
-            ORDER BY states.id ASC", (sys.argv[4],))
+            ORDER BY cities.id ASC", (sys.argv[4],))
     ans = c.fetchall()
     res = len(ans)
     for i in range(res):
