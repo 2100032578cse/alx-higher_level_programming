@@ -9,4 +9,9 @@ if __name__=="__main__":
     from sqlalchemy.orm import sessionmaker
 
 
-    engine = create_engine()
+    mysql_engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
+                           .format(sys.argv[1],sys.argv[2],sys.argv[3]))
+    Base.metadata.create_all(mysql_engine)
+    Session = sessionmaker(bind=mysql_engine)
+    session = Session()
+    for item in session.query(State).order_by(State.id):print("{:d}: {:s}".format(item.id, item.name))
