@@ -1,6 +1,6 @@
 #!/usr/bin/pythin3
-"""script that lists all State objects from the
-database hbtn_0e_6_usa"""
+"""Write a script that lists all State objects that contain t
+letter a from the database hbtn_0e_6_usa"""
 
 if __name__ == "__main__":
     import sys
