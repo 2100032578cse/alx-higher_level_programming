@@ -11,7 +11,9 @@ if __name__ == "__main__":
                          user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
 
     c = db.cursor()
-    c.execute("SE)
+    c.execute("SELECT cities.id, cities.name, states.name
+    FROM cities JOIN states ON cities.state_id = states.id
+    ORDER BY cities.id ASC")
     r = c.fetchall()
     for i in r:
         print(i)
