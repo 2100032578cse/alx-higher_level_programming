@@ -2,7 +2,10 @@
 # function that finds a peak in a list of unsorted integers.
 # algorithm must have the lowest complex
 
+
 def find_peak(list_of_integers):
+    """ function that finds a peak in a list of unsorted integers"""
+
     mid = int((len(list_of_integers) / 2))
     if list_of_integers is None:
         return none
