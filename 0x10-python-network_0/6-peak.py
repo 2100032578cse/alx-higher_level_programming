@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 # function that finds a peak in a list of unsorted integers.
+# algorithm must have the lowest complex
 
 def find_peak(list_of_integers):
     mid = int((len(list_of_integers) / 2))
