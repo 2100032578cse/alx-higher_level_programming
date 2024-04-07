@@ -14,7 +14,7 @@ import sys
 if __name__ == "__main__":
     var1 = sys.argv[1]
     var2 = sys.argv[2]
-    url = "https://api.github.com/repos/{var2}/{var1}/commits"
+    url = "https://api.github.com/repos/{}/{}/commits".format(var2, var1)
     request = requests.get(url)
     commts = request.json()
     try:
