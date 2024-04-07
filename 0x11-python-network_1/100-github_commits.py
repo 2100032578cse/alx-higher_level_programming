@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""  Python script that takes 2 arguments in order to solve this challenge.
+""" The Python script that takes 2 arguments in order to solve this challenge.
 The first argument will be the repository name
 The second argument will be the owner name
 You must use the packages requests and sys
