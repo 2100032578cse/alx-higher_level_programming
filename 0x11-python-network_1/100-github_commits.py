@@ -12,8 +12,15 @@ import sys
 
 
 if __name__ == "__main__":
-    url = "https://api.github.com/user"
     var1 = sys.argv[1]
     var2 = sys.argv[2]
+    url = "https://api.github.com/repos/{var2}/{var1}/commits"
     request = requests.get(url)
-    print(request.json().get("id"))
+    commts = request.json()
+    try:
+        for item in range(10):
+            print("{}: {}".format(
+                commts[item].get("sha"),
+                commts[item].get("commit").get("author").get("name")))
+    except IndexError:
+        pass
