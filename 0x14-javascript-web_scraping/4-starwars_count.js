@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-//the number of films ny id
+// the number of films ny id
 const request = require('request');
 let num = 0;
 
